@@ -10,7 +10,7 @@ export default function App() {
   const [dataChannel, setDataChannel] = useState(null);
   const peerConnection = useRef(null);
   const audioElement = useRef(null);
-
+  const [voice, setVoice] = useState("verse");
   async function startSession() {
     // Get an ephemeral key from the Fastify server
     const tokenResponse = await fetch("/token");
